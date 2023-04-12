@@ -1,0 +1,35 @@
+// =========== Time Count ========== //
+.time-count {
+  padding: 1.25rem;
+  background-color: $color-white;
+  box-shadow: $box-shadow-primary;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__val {
+    min-width: 5rem;
+    font-size: 4rem;
+    line-height: 1;
+    color: $color-primary;
+  }
+
+  &__separator {
+    margin: 0 0.625rem;
+    font-size: 3rem;
+    line-height: 1.45;
+    text-align: center;
+    color: $color-primary;
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    color: $color-black;
+  }
+}

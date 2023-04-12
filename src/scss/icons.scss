@@ -1,0 +1,48 @@
+// ========== ICONS ========== //
+@font-face {
+  src: url('../fonts/icomoon.woff') format('woff'), url('../fonts/icomoon.woff2') format('woff2');
+  font-family: 'icomoon';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  display: inline-flex;
+  align-items: center;
+  font-family: inherit;
+  gap: 0.5rem;
+
+  &::before {
+    font-family: 'icomoon' !important;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    speak: never;
+  }
+}
+
+.icon-clock::before {
+  content: '\e900';
+}
+
+.icon-smile::before {
+  content: '\e903';
+}
+
+.icon-picture::before {
+  content: '\e902';
+}
+
+.icon-trash::before {
+  content: '\e906';
+}
+
+.icon-search::before {
+  content: '\e901';
+}

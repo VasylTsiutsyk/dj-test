@@ -1,0 +1,56 @@
+// ========== Card General ========== //
+
+.card {
+  --font-size: 1rem;
+  --line-height: 1.5;
+  --rows: 2;
+  --transition-duration: 0.5s;
+  --bs-card-border-color: #ebebeb;
+
+  .card-img-wrap {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding: 0.5rem;
+    padding-bottom: 56.17%;
+
+    .card-img-top {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card-text {
+    position: relative;
+    overflow: hidden;
+    max-height: calc(var(--font-size) * var(--rows) * var(--line-height));
+    font-size: var(--font-size);
+    font-weight: 400;
+    color: $color-secondary;
+    transition: max-height var(--transition-duration) ease-in-out;
+  }
+
+  .btn-link {
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    color: $color-dark;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .card-footer {
+    border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+    background-color: var(--bs-card-cap-bg);
+    color: var(--bs-card-cap-color);
+  }
+}

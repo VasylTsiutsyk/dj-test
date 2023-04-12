@@ -1,0 +1,28 @@
+// ===== Spoilers ===== //
+
+[data-spoilers] {
+  &._init {
+    [data-spoiler] {
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0.5rem;
+        top: 50%;
+        border: solid currentcolor;
+        border-width: 0 0.125rem 0.125rem 0;
+        padding: px(4);
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition: $transition-primary;
+      }
+
+      &._active {
+        &::after {
+          transform: translate(-50%, -50%) rotate(-135deg);
+        }
+      }
+    }
+  }
+}

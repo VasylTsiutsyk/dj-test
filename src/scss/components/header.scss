@@ -1,0 +1,19 @@
+.nav-item {
+  &.active {
+    .nav-link {
+      font-weight: 700;
+      color: $color-dark;
+    }
+  }
+
+  .nav-link {
+    @include hover {
+      color: $color-dark;
+    }
+
+    &:focus,
+    &:active {
+      color: $color-dark;
+    }
+  }
+}

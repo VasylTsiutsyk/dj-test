@@ -1,0 +1,59 @@
+// =========== Pagination ========== //
+.pagination {
+  display: inline-block;
+
+  &__prev,
+  &__next {
+    width: px(43);
+    height: px(21);
+    background-color: $color-primary;
+    opacity: 0.6;
+    transition: opacity $transition-duration-primary;
+
+    @include hover {
+      opacity: 1;
+    }
+
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: px(-4) px(-8);
+
+    > li {
+      display: flex;
+      margin: px(4);
+
+      > a {
+        margin: auto;
+        padding: px(4);
+        font-size: px(18);
+        font-weight: 700;
+        color: #747474;
+        transition: color $transition-duration-primary;
+
+        @include respond-below(xs) {
+          font-size: 20px;
+        }
+
+        @include hover {
+          color: $color-primary;
+        }
+
+        &:focus,
+        &:active {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &__next {
+    transform: rotate(180deg);
+  }
+}

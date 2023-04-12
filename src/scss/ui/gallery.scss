@@ -1,0 +1,46 @@
+// ========== GALLERY GRID ========== //
+.grid {
+  margin: px(-10);
+
+  &__item {
+    width: calc(100% / 6);
+    height: px(295);
+    padding: px(10);
+
+    @include respond-below(sm) {
+      width: calc(100% / 2);
+    }
+
+    @include respond-below(xs) {
+      width: 100%;
+    }
+
+    &--width2 {
+      width: calc(100% / 6 * 2);
+    }
+
+    &--width3 {
+      width: calc(100% / 6 * 3);
+    }
+
+    &--width6 {
+      width: calc(100%);
+    }
+
+    &--height2 {
+      height: px(590);
+
+      @include respond-below(sm) {
+        height: px(295);
+      }
+    }
+
+    &--height3 {
+      height: px(885);
+
+      @include respond-below(sm) {
+        height: px(295);
+      }
+    }
+  }
+}

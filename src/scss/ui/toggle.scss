@@ -1,0 +1,93 @@
+// ========== TOGGLE ========== //
+.toggle {
+  overflow: hidden;
+  text-align: left;
+
+  &._active {
+    .toggle__btn {
+      color: $color-primary;
+    }
+
+    .toggle__plus {
+      &::after {
+        border-color: $color-primary;
+        transform: translate(-50%, -50%) rotate(-135deg);
+      }
+    }
+
+    .toggle__content {
+      padding: px(20);
+    }
+  }
+
+  &__content {
+    box-sizing: content-box;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 px(20);
+    transition: $transition-primary;
+
+    > *:not(:last-child) {
+      margin-bottom: px(20);
+    }
+  }
+
+  &__btn {
+    position: relative;
+    outline: none;
+    border: px(1) solid $color-primary;
+    width: 100%;
+    padding: px(15) px(50) px(15) px(15);
+    background: none;
+    font-size: px(22);
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+    transition: $transition-primary;
+
+    @include respond-below(md) {
+      padding: 15px 50px 15px 20px;
+    }
+
+    @include hover {
+      color: $color-primary;
+
+      .toggle__plus {
+        &::after {
+          border-color: $color-primary;
+        }
+      }
+    }
+
+    &:focus,
+    &:active {
+      color: $color-primary;
+
+      .toggle__plus {
+        &::after {
+          border-color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &__plus {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: px(54);
+    height: 100%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border: solid currentcolor;
+      border-width: 0 px(2) px(2) 0;
+      padding: px(4);
+      transform: translate(-50%, -50%) rotate(45deg);
+      transition: $transition-primary;
+    }
+  }
+}

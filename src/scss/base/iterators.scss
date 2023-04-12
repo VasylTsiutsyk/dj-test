@@ -1,0 +1,56 @@
+// ========== SIZES ========== //
+$sizes: (
+  '0': 0,
+  '1': 0.5rem,
+  '2': 1rem,
+  '3': 1.5rem,
+  '4': 2rem,
+  '5': 2.5rem,
+  '6': 3rem,
+  '7': 3.5rem,
+  '8': 4rem,
+  '9': 4.5rem,
+  '10': 5rem,
+  '25': 25%,
+  '50': 50%,
+  '100': 100%,
+);
+
+@each $size, $value in $sizes {
+  .mb-#{$size} {
+    margin-bottom: $value;
+  }
+
+  .pb-#{$size} {
+    padding-bottom: $value;
+  }
+
+  .pt-#{$size} {
+    padding-top: $value;
+  }
+}
+
+// ========== COLORS ========== //
+// @each $color, $value in $colors {
+//   .color-#{$color} {
+//     color: $value;
+//   }
+// }
+
+// ========== TEXT-TRANSFORMS ========== //
+$transforms: capitalize, uppercase, lowercase;
+
+@each $transform in $transforms {
+  .text-#{$transform} {
+    text-transform: $transform;
+  }
+}
+
+// ========== TEXT-ALIGNS ========== //
+$aligns: left, center, right;
+
+@each $align in $aligns {
+  .text-#{$align} {
+    text-align: $align;
+  }
+}

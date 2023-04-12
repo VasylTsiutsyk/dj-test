@@ -1,0 +1,28 @@
+// ========== SOC ========== //
+.soc {
+  display: flex;
+  flex-wrap: wrap;
+  margin: px(-7);
+  font-size: px(20);
+
+  @include respond-below(md) {
+    font-size: 20px;
+  }
+
+  > li {
+    margin: px(7);
+
+    > a {
+      transition: color $transition-duration-primary;
+
+      @include hover {
+        color: $color-primary;
+      }
+
+      &:focus,
+      &:active {
+        color: $color-primary;
+      }
+    }
+  }
+}

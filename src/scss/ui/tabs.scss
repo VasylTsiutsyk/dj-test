@@ -1,0 +1,59 @@
+// ========== TABS ========== //
+.tabs {
+  position: relative;
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    background-color: $color-primary;
+    transition: $transition-primary;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow-x: auto;
+
+    > li {
+      flex: 1 1 auto;
+
+      > button {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        padding: px(13) px(35);
+        font-size: px(20);
+        font-weight: 700;
+        white-space: nowrap;
+        text-align: center;
+        cursor: pointer;
+        transition: color $transition-duration-primary;
+
+        @include respond-below(md) {
+          font-size: 14px;
+        }
+
+        @include hover {
+          color: $color-primary;
+        }
+
+        &:focus,
+        &:active,
+        &._active {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &__panel {
+    display: none;
+
+    &._active {
+      display: block;
+    }
+  }
+}

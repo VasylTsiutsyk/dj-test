@@ -1,0 +1,4 @@
+gulp
+node_modules
+dist
+src/scss/vendors

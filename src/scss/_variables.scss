@@ -1,0 +1,45 @@
+// container settings
+$mar: 15;
+$items: 12;
+$content-width: 1280;
+$container: $content-width + 2 * $mar;
+
+// fonts
+$font-family-primary: 'Commissioner', sans-serif;
+$font-family-secondary: 'Arial', sans-serif;
+$font-size-primary: 1rem;
+$font-weight-primary: 400;
+$body-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// colors
+$color-black: #000;
+$color-white: #fff;
+$color-grey: #666;
+$color-orange: #ed7135;
+$color-dark: #292929;
+$color-primary: $color-orange;
+$color-secondary: $color-grey;
+$color-grey-1: #eee;
+$color-border: #ebebeb;
+
+// transitions
+$transition-duration-primary: 0.35s;
+$transition-primary: all $transition-duration-primary ease;
+
+// borders
+$border-radius-primary: 0.25rem;
+
+// box-shadows
+$box-shadow-primary: 0 0 1rem rgba($color-primary, 0.25);
+
+// breakpoints map
+$breakpoints: (
+  xxs: 320px,
+  xs: 480px,
+  sm: 768px,
+  md: 992px,
+  lg: 1280px,
+  xl: 1440px,
+  xxl: 1560px,
+);

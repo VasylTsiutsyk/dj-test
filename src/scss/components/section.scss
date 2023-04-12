@@ -1,0 +1,87 @@
+// ========== Section General ========== //
+.section {
+  &__wrap {
+    padding: px(60) 0;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: px(20);
+    }
+  }
+
+  &__body {
+    &:not(:last-child) {
+      margin-bottom: px(50);
+    }
+
+    > *:not(:last-child) {
+      margin-bottom: px(20);
+    }
+  }
+
+  &__btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: px(10);
+  }
+}
+
+// ========== Section Img Text ========== //
+.img-text {
+  &--reversed {
+    .img-text__row {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__wrap {
+    padding: px(80) 0;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: px(-20) px(-30);
+  }
+
+  &__col {
+    flex: 0 0 50%;
+    padding: px(20) px(30);
+
+    @include respond-below(md) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__img {
+    position: relative;
+    padding-bottom: 65%;
+    background-color: rgba($color-primary, 0.1);
+
+    &--contain {
+      padding-bottom: 0;
+      background-color: none;
+      text-align: center;
+
+      img {
+        position: static;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

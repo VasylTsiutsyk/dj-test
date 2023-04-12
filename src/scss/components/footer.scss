@@ -1,0 +1,47 @@
+// ========== FOOTER ========== //
+.footer {
+  border-top: px(1) solid rgba($color-primary, 0.25);
+
+  &__wrap {
+    padding: px(80) 0;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: px(-20);
+  }
+
+  &__col {
+    flex: 0 0 25%;
+    padding: px(20);
+
+    @include respond-below(md) {
+      flex: 0 0 50%;
+    }
+
+    @include respond-below(sm) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 0.5rem;
+  }
+
+  &__menu {
+    > li {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+
+      > a {
+        transition: color $transition-duration-primary;
+
+        @include hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}

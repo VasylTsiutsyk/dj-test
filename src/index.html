@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  @@include('html/layout/_head.html', { 'title': 'Test', })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/layout/_header.html')
+
+      <main class="py-2">
+        <section class="py-5">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-md-3 mb-5">
+                <div class="list-group border-0">
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action active icon-picture"
+                  >
+                    All photos
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action icon-smile"
+                  >
+                    Selfies
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action icon-clock"
+                  >
+                    Recent
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action icon-trash"
+                  >
+                    Deleted
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-8">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-1"
+                >
+                  <h1 class="mr-3 mb-0">All photos</h1>
+
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-dark">Newest</button>
+                    <button class="btn btn-outline-secondary">Latest</button>
+                  </div>
+                </div>
+
+                <div class="text-secondary fw-bold fs-6 mb-4">150 items</div>
+
+                <div class="row" id="product-list">
+                  <!-- product cards will be added dynamically here -->
+                </div>
+
+                <div class="text-center mt-3">
+                  <button class="btn btn-primary" id="load-more-btn">
+                    Load More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @@include('html/layout/_footer.html') @@include('html/layout/_js.html')
+    </div>
+  </body>
+</html>

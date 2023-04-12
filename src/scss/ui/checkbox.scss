@@ -1,0 +1,56 @@
+// ========== CHECKBOX ========== //
+.checkbox {
+  position: relative;
+  display: block;
+  padding-left: 35px;
+  cursor: pointer;
+  user-select: none;
+
+  @include hover {
+    input ~ .checkbox__mark {
+      background-color: rgba($color-primary, 0.15);
+    }
+  }
+
+  input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ .checkbox__mark {
+      background-color: $color-primary;
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__mark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-color: rgba($color-primary, 0.1);
+    transition: $transition-primary;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 9px;
+      top: 2.5px;
+      border: solid $color-white;
+      border-width: 0 3px 3px 0;
+      width: 8px;
+      height: 15px;
+      opacity: 0;
+      visibility: hidden;
+      transform: rotate(45deg);
+      transition: $transition-primary;
+    }
+  }
+}
